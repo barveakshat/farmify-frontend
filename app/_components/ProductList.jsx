@@ -10,9 +10,13 @@ function ProductList({productList}) {
         md:grid-cols-3
         lg:grid-cols-4
         gap-5 mt-6'>
-            {productList?.map((product,index)=>index<8&&(
+            {/* {productList?.map((product,index)=>index<8&&(
                 <ProductItem product={product} />
+            ))} */}
+            {productList?.map((product, index) => index < 8 && (
+              <ProductItem key={product.id || index} product={product} />
             ))}
+
         </div>
     </div>
   )
